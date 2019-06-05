@@ -5,12 +5,5 @@ services:
     build: .
     ports:
       - "3000:3000"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - .:/opt/app:rw
-      - /tmp:/tmp:rw
-    # command:
-    #   - --region
-    #   - us-west-2
-    #   - --host
-    #   - 0.0.0.0
+    privileged: true
+    command: /app/run_api.sh
