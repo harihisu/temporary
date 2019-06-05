@@ -6,4 +6,4 @@ services:
     ports:
       - "3000:3000"
     privileged: true
-    command: /app/run_api.sh
+    entrypoint: /app/run_api.sh
